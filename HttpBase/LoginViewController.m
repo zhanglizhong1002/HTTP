@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "ShareViewController.h"
 
 
 #import <MOBFoundation/MOBFoundation.h>
@@ -32,7 +33,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.view.backgroundColor = [UIColor grayColor];
+    self.title = @"Login";
+    
+    self.view.backgroundColor = [UIColor purpleColor];
+}
+
+
+- (IBAction)shareAction:(id)sender {
+    
+    ShareViewController *VC = [[ShareViewController alloc] init];
+    [self.navigationController pushViewController:VC animated:YES];
 }
 
 
@@ -49,7 +59,7 @@
         sourceType = 0;
         if (![QQApi isQQInstalled]) {
 //            [GlobalMethods showTextHUD:@"没有对应客户端" andView:self.view maintainTime:2.0f];
-            [CDCommonTool showWithStatus:@"没有对应客户端"];
+            [CDCommonTool showErrorWithStatus:@"没有对应客户端"];
         }
         
     }
@@ -58,7 +68,7 @@
         sourceType = 1;
         if (![WeiboSDK isWeiboAppInstalled]) {
 //            [GlobalMethods showTextHUD:@"没有对应客户端" andView:self.view maintainTime:2.0f];
-            [CDCommonTool showWithStatus:@"没有对应客户端"];
+            [CDCommonTool showErrorWithStatus:@"没有对应客户端"];
         }
     }
     else{
@@ -66,7 +76,7 @@
         sourceType = 2;
         if (![WXApi isWXAppInstalled]) {
 //            [GlobalMethods showTextHUD:@"没有对应客户端" andView:self.view maintainTime:2.0f];
-            [CDCommonTool showWithStatus:@"没有对应客户端"];
+            [CDCommonTool showErrorWithStatus:@"没有对应客户端"];
         }
         
     }

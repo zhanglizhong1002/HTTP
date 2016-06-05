@@ -10,4 +10,8 @@
 
 @interface CDBaseResult : NSObject
 
+@property (nonatomic , copy) NSString* code;
+@property (nonatomic , copy) NSString* msg;
+@property (nonatomic , strong) NSArray * datas;
+
 @end

@@ -10,4 +10,9 @@
 #define Define_h
 
 
+#define kBaseRequestUrl @"http://120.76.166.178:8080/yytx/"
+#define kTranslateBaseUrl @"http://www.omsapp.cn:8080/yytx/"
+
+#define kTranslateInterpreterUrl CHString(@"%@",@"interpreter/")
+
 #endif /* Define_h */

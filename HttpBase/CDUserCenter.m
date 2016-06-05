@@ -7,7 +7,12 @@
 //
 
 #import "CDUserCenter.h"
+#import "CDUserCenterModel.h"
 
 @implementation CDUserCenter
+
++ (NSDictionary *)mj_objectClassInArray{
+    return @{@"datas" : [CDUserCenterModel class]};
+}
 
 @end

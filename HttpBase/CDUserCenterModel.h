@@ -10,4 +10,10 @@
 
 @interface CDUserCenterModel : NSObject
 
+@property (nonatomic , copy) NSString* title;//
+@property (nonatomic , copy) NSString* summary;//
+@property (nonatomic , copy) NSString* thumb;//
+@property (nonatomic , copy) NSString* createTime;//
+@property (nonatomic , copy) NSString* type;//
+
 @end

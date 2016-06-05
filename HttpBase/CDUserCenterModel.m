@@ -10,4 +10,8 @@
 
 @implementation CDUserCenterModel
 
++ (NSDictionary *)mj_replacedKeyFromPropertyName{
+    return @{@"myId" : @"id"};
+}
+MJCodingImplementation
 @end
